@@ -1,6 +1,6 @@
 web:
   hosts:
-    157.245.82.37
+    83.226.220.77
   vars:
     domain: site.dev
     web_user: www-data
