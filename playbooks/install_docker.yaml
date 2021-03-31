@@ -11,7 +11,7 @@
       name: ['docker']
       state: latest
 
-  name: "install docker.io"
+  -name: "install docker.io"
     apt:
       name: ['docker.io']
       state: latest
