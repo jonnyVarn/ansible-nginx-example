@@ -18,5 +18,7 @@
       enabled: no
       state: stopped
       
-  - name: "disable unattended-uppgrades"
-    apt: remove "unattended-uppgrades"
+  - name: "remove unattended-uppgrades"
+    apt: 
+      name: unattended-uppgrades
+      state: absent
