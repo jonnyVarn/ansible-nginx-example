@@ -1,0 +1,22 @@
+- hosts: web
+  become: yes
+  tasks:
+  - name: "apt-get update"
+    apt:
+      update_cache: yes
+      cache_valid_time: 3600
+
+  - name: "disable systemctl-services bluetooth"
+    service: 
+      name: bluetooth.target
+      enabled: no
+      state: stopped
+
+  - name: "disable systemctl-service unattended-uppgrade "
+    service:
+      name: unattended-upgrades.service
+      enabled: no
+      state: stopped
+      
+  - name: "disable unattended-uppgrades"
+    apt: remove "unattended-uppgrades"
